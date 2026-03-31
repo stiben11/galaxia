@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión...</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+<div id="fadeBlack"></div>
+<div id="ui">
+
+    <!-- PANTALLA INICIAL -->
+    <div id="screen1" class="screen active">
+        <h2>Acceso requerido</h2>
+
+        <div class="fingerprint" id="fingerprint">
+            <!-- SVG HUELLA REAL -->
+            <svg viewBox="0 0 100 100" class="finger-svg">
+                <path d="M50 10 C30 10, 20 30, 20 50 
+                         C20 70, 30 90, 50 90 
+                         C70 90, 80 70, 80 50 
+                         C80 30, 70 10, 50 10 Z" />
+                <path d="M50 20 C35 20, 30 35, 30 50 
+                         C30 65, 35 80, 50 80 
+                         C65 80, 70 65, 70 50 
+                         C70 35, 65 20, 50 20 Z" />
+            </svg>
+            <div class="scan"></div>
+        </div>
+
+        <p class="hint">Mantén presionado</p>
+    </div>
+
+    <!-- SISTEMA -->
+    <div id="screen2" class="screen">
+        <h2 id="systemText"></h2>
+        <!-- BARRA DE CARGA -->
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+            <p id="loadingPercent">0%</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- AUDIO DE FONDO -->
+<audio id="spaceSound" loop>
+    <source src="assets/musica.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
